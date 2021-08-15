@@ -16,19 +16,19 @@ void setup() {
 }
 
 void loop() {
-  long tiempo, centimetro;
+  long duration, distance;
    // Mandar un pulso bajo para asegurar un pulso alto
   digitalWrite(trigPin, LOW);  
   delay(200); 
   digitalWrite(trigPin, HIGH);
   delay(100); 
   digitalWrite(trigPin, LOW);
-  tiempo= pulseIn(echoPin, HIGH);
+  duration = pulseIn(echoPin, HIGH);
 
   //Convertir el tiempo en distancia
-  centimetros = tiempo /29/2 ;
+  distance = duration /29/2 ;
    
-  if (centimetros < 20) {  
+  if (distance < 20) {  
     digitalWrite(ledRouge,HIGH);
     delay(100);
     
@@ -38,15 +38,15 @@ void loop() {
     delay(100);
   }
   
-  if ( centimetros < 0){  
+  if ( distance < 0){  
     Serial.println( "distancia ");
-    Serial.println(centimetros);
+    Serial.println(distance);
     Serial.println(" cm ");
     Serial.println();
 
   }
   else {
-   //Serial.print(tiempo);
+   //Serial.print(duration);
     Serial.println("fuera de alcance");
    
   }
