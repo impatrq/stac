@@ -7,9 +7,6 @@
 #define trigPin 13  //Trig Ultrasonico -> pin 13
 #define echoPin 12  //Echo Ultrasonico -> pin 12
 #define ledRouge 10      //Led amarillo -> pin 11
-int centimetros;
-int tiempo;
-
 
 void setup() {
   Serial.begin (9600);  
