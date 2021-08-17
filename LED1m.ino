@@ -39,16 +39,12 @@ void loop() {
   }
   
   if ( distance < 0){  
-    Serial.println( "distancia ");
-    Serial.println(distance);
-    Serial.println(" cm ");
-    Serial.println();
-
+    Serial.println("fuera de alcance");
   }
   else {
-   //Serial.print(duration);
-    Serial.println("fuera de alcance");
-   
+    Serial.print( "distancia ");
+    Serial.print(distance);
+    Serial.println(" cm ");
   }
   delay(100);  
 }
