@@ -28,7 +28,7 @@ void loop() {
   //Convertir el tiempo en distancia
   distance = duration /29/2 ;
    
-  if (distance < 20) {  
+  if (distance <= 100) {  
     digitalWrite(ledRojo,HIGH);
     delay(100);
     
