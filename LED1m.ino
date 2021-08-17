@@ -1,59 +1,57 @@
 //**********************************************************
 // 
-//sensor de distacia  HC-SR04 Arduino Uno
+// Sensor de distacia  HC-SR04 Arduino Uno
 // 
 //**********************************************************
 
 #define trigPin 13  //Trig Ultrasonico -> pin 13
 #define echoPin 12  //Echo Ultrasonico -> pin 12
-#define ledVerte 11      //Led verde -> pin 10
-#define ledRouge 10      //Led amarillo -> pin 11
-int centimetros;
-int tiempo;
+#define ledRojo 10  //Led Rojo -> pin 10
 
-
-void setup() {
+void setup() 
+{
   Serial.begin (9600);  
   pinMode(trigPin, OUTPUT);  //Trig 
   pinMode(echoPin, INPUT);   //Echo 
-  pinMode(ledVerte, OUTPUT);
-  pinMode(ledRouge, OUTPUT);
+  pinMode(ledRojo, OUTPUT);
 }
 
-void loop() {
-  long tiempo, centimetro;
-   // Mandar un pulso bajo para asegurar un pulso alto
+void loop() 
+{
+  long duration, distance;
+  // Mandar un pulso bajo para asegurar un pulso alto
   digitalWrite(trigPin, LOW);  
   delay(200); 
   digitalWrite(trigPin, HIGH);
   delay(100); 
   digitalWrite(trigPin, LOW);
-  tiempo= pulseIn(echoPin, HIGH);
+  duration = pulseIn(echoPin, HIGH);
 
-  //Convertir el tiempo en distancia
-  centimetros = tiempo /29/2 ;
-   
-  if (centimetros < 20) {  
-    digitalWrite(ledRouge,HIGH);
+  //Convertir el tiempo en distancia en cm
+  distance = duration /29/2 ;
+
+  //Si el obstaculo se encuentra a 1m led se enciende 
+  if (distance <= 100)
+  {  
+    digitalWrite(ledRojo, HIGH);
     delay(100);
-    
-}
-  else {   
-    digitalWrite(ledRouge,LOW);
+  }
+  else
+  {   
+    digitalWrite(ledRojo, LOW);
     delay(100);
   }
   
-  if ( centimetros < 0){  
-    Serial.println( "distancia ");
-    Serial.println(centimetros);
-    Serial.println(" cm ");
-    Serial.println();
-
-  }
-  else {
-   //Serial.print(tiempo);
+  //Mostrar si el obstaculo esta fuera de alcance o su distancia
+  if (distance < 0)
+  {  
     Serial.println("fuera de alcance");
-   
+  }
+  else 
+  {
+    Serial.print("distancia ");
+    Serial.print(distance);
+    Serial.println(" cm");
   }
   delay(100);  
 }
