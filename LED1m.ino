@@ -6,13 +6,13 @@
 
 #define trigPin 13  //Trig Ultrasonico -> pin 13
 #define echoPin 12  //Echo Ultrasonico -> pin 12
-#define ledRouge 10      //Led amarillo -> pin 11
+#define ledRojo 10      //Led amarillo -> pin 11
 
 void setup() {
   Serial.begin (9600);  
   pinMode(trigPin, OUTPUT);  //Trig 
   pinMode(echoPin, INPUT);   //Echo 
-  pinMode(ledRouge, OUTPUT);
+  pinMode(ledRojo, OUTPUT);
 }
 
 void loop() {
@@ -29,12 +29,12 @@ void loop() {
   distance = duration /29/2 ;
    
   if (distance < 20) {  
-    digitalWrite(ledRouge,HIGH);
+    digitalWrite(ledRojo,HIGH);
     delay(100);
     
 }
   else {   
-    digitalWrite(ledRouge,LOW);
+    digitalWrite(ledRojo,LOW);
     delay(100);
   }
   
