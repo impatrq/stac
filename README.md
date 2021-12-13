@@ -15,7 +15,7 @@ Luego de una investigación por parte del equipo productivo sobre las diferentes
 Agradecidos de ser ganadores del **1er Puesto** en la competencia **PROTOTIPOS I** de la ONIET celebrada por la Universidad Blas Pascal.
 <div align="center">
 
-[![Ganadores-ONIET.jpg](https://i.postimg.cc/qMH4BWkh/Ganadores-ONIET.jpg)](https://postimg.cc/fkC6B2SD)
+[![Ganadores-ONIET.jpg](https://i.postimg.cc/qR4h8vKP/Ganadores-ONIET.jpg)](https://postimg.cc/HJvkmHBz)
 
 </div>
 
