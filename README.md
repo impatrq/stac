@@ -11,6 +11,9 @@
 ## ¿Donde nacio la idea?
 Luego de una investigación por parte del equipo productivo sobre las diferentes necesidades de las personas ciegas, concluimos en esta idea.
 
+## Funcionamiento
+El funcionamiento de **STAC** se basa en la utilización de un sensor ultrasonic que captara el obstaculo, luego procesando su localización, y evaluandola como una alerta vibratoria en el mango del baston.
+
 ## Reconocimientos
 Agradecidos de ser ganadores del **1er Puesto** en la competencia **PROTOTIPOS I** de la ONIET celebrada por la Universidad Blas Pascal.
 <div align="center">
